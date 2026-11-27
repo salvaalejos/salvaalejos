@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 132" width="800" height="132">
+  <defs>
+    <radialGradient id="gHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F5A623" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gSpidey" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E62429" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gPoke" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="23%" stop-color="#F5A623"/>
+      <stop offset="50%" stop-color="#E62429"/>
+      <stop offset="77%" stop-color="#FF6B00"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="132" rx="12" fill="#0d1117" stroke="#21262d" stroke-width="1"/>
+
+  <!-- Línea de circuito + pulso viajando -->
+  <line x1="40" y1="58" x2="760" y2="58" stroke="url(#lineGrad)" stroke-width="1.5" opacity="0.55"/>
+  <circle cy="58" r="3" fill="#00D8FF">
+    <animate attributeName="cx" values="40;760;40" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;1;0.2" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- HALO (Izquierda) -->
+  <g transform="translate(185, 58)">
+    <circle r="44" fill="url(#gHalo)"/>
+    <circle r="32" fill="none" stroke="#21262d" stroke-width="1" stroke-dasharray="4 4"/>
+    <!-- Anillo Halo -->
+    <ellipse rx="30" ry="12" transform="rotate(-24)" fill="none" stroke="#00D8FF" stroke-width="2.5">
+      <animate attributeName="opacity" values="0.65;1;0.65" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse rx="24" ry="8" transform="rotate(-24)" fill="none" stroke="#F5A623" stroke-width="1.6"/>
+    <!-- Silueta visor Spartan minimalista -->
+    <polygon points="-14,-8 14,-8 18,0 10,9 -10,9 -18,0" fill="#F5A623" opacity="0.92"/>
+    <polygon points="-11,-5 11,-5 14,0 8,6 -8,6 -14,0" fill="#161b22" opacity="0.35"/>
+    <text y="55" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-size="10" font-weight="700" letter-spacing="4" fill="#8b949e">HALO</text>
+  </g>
+
+  <!-- SPIDER-MAN (Centro) -->
+  <g transform="translate(400, 58)">
+    <circle r="46" fill="url(#gSpidey)"/>
+    <!-- Telaraña geométrica sutil -->
+    <circle r="33" fill="none" stroke="#1f6feb" stroke-width="0.9" opacity="0.45"/>
+    <circle r="21" fill="none" stroke="#1f6feb" stroke-width="0.8" opacity="0.35"/>
+    <line x1="-33" y1="0" x2="33" y2="0" stroke="#1f6feb" stroke-width="0.7" opacity="0.3"/>
+    <line x1="0" y1="-33" x2="0" y2="33" stroke="#1f6feb" stroke-width="0.7" opacity="0.3"/>
+    <!-- Emblema Spider-Man -->
+    <g fill="#E62429" stroke="#E62429" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+      <ellipse cx="0" cy="-7" rx="3.5" ry="4.5"/>
+      <polygon points="0,-1 6,8 0,18 -6,8"/>
+      <!-- Patas izquierdas -->
+      <polyline points="-3,-6 -13,-15 -18,-22" fill="none"/>
+      <polyline points="-4,-2 -17,-8 -24,-12" fill="none"/>
+      <polyline points="-4,3 -17,6 -23,14" fill="none"/>
+      <polyline points="-3,8 -12,17 -15,25" fill="none"/>
+      <!-- Patas derechas -->
+      <polyline points="3,-6 13,-15 18,-22" fill="none"/>
+      <polyline points="4,-2 17,-8 24,-12" fill="none"/>
+      <polyline points="4,3 17,6 23,14" fill="none"/>
+      <polyline points="3,8 12,17 15,25" fill="none"/>
+      <animate attributeName="opacity" values="0.75;1;0.75" dur="2.6s" repeatCount="indefinite"/>
+    </g>
+    <text y="55" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-size="10" font-weight="700" letter-spacing="4" fill="#8b949e">SPIDER-MAN</text>
+  </g>
+
+  <!-- POKÉMON (Derecha) -->
+  <g transform="translate(615, 58)">
+    <circle r="44" fill="url(#gPoke)"/>
+    <circle r="32" fill="none" stroke="#21262d" stroke-width="1" stroke-dasharray="4 4"/>
+    <!-- Pokéball minimalista neón -->
+    <path d="M -23,0 A 23,23 0 0,1 23,0 Z" fill="#FF6B00" opacity="0.9"/>
+    <path d="M -23,0 A 23,23 0 0,0 23,0 Z" fill="#E6EDF3" opacity="0.9"/>
+    <line x1="-24" y1="0" x2="24" y2="0" stroke="#0d1117" stroke-width="4"/>
+    <circle r="8.5" fill="#0d1117"/>
+    <circle r="4.8" fill="#FFD600">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <text y="55" text-anchor="middle" font-family="Segoe UI, Ubuntu, sans-serif" font-size="10" font-weight="700" letter-spacing="4" fill="#8b949e">POKÉMON</text>
+  </g>
+</svg>
